@@ -15,7 +15,7 @@ jobs:
       - name: Create ZIP
         run: |
           cd code
-          zip "../MemoryTracker-${{ github.ref_name }}.zip" .
+          zip -r "../MemoryTracker-${{ github.ref_name }}.zip" .
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
