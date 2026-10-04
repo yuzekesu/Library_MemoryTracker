@@ -1,6 +1,8 @@
 #pragma once
 #include "IMemory.h"
+#include <algorithm>
 
+inline static std::size_t _LARGEST_SIZE_OF_M_DESCRIPTION = 0u;
 /// <summary>
 /// Container for the memory that you want to monitor. 
 /// </summary>
@@ -34,6 +36,7 @@ inline Memory<T>::Memory(const T& ref, const char* description, const char* suff
 	m_description = description;
 	m_p_value = &ref;
 	m_suffix = suffix;
+	_LARGEST_SIZE_OF_M_DESCRIPTION = std::max(_LARGEST_SIZE_OF_M_DESCRIPTION, m_description.size());
 }
 /// <summary>
 /// Formats the string to be displayed in the terminal. 
@@ -58,7 +61,9 @@ inline std::string Memory<T>::What() {
 	else {
 		value = "Invalid Type, please implement `operator std::string() const;` for this type.";
 	}
-	ss << m_description << ": " << value << m_suffix << "\n";
+	const size_t dif = _LARGEST_SIZE_OF_M_DESCRIPTION - m_description.size();
+	ss << m_description << ": " << std::string(dif, ' ');
+	ss << value << m_suffix << "\n";
 	return ss.str();
 }
 /// <summary>

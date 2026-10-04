@@ -28,7 +28,7 @@ void foo() {
 	double d = 0.0;
 	eoo e{};
 	Memory<int> mem_a(a, "a");
-	Memory<float> mem_b(b, "b", "f");
+	Memory<float> mem_b(b, "bbbbb", "f");
 	Memory<coo> mem_c(c, "c", "");
 	Memory<double> mem_d(d, "c", "");
 	Memory mem_e(e, "e", "");
