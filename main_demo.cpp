@@ -11,7 +11,7 @@ int main() {
 
 class coo {
 public:
-	operator std::string() const {
+	explicit operator std::string() const {
 		return std::string{ "Custome class workds too ;)" };
 	}
 };

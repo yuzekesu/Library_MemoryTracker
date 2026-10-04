@@ -49,8 +49,10 @@ inline std::string Memory<T>::What() {
 	if constexpr (requires { std::to_string(*m_p_value); }) {
 		value = std::to_string(*m_p_value);
 	}
-	// compile time question "Can a T be implicitly converted into a std::string?"
-	else if constexpr (std::is_convertible_v<T, std::string>) {
+	// if only wants to garantee the implicit convertion,
+	// use std::is_convertible_v<T, std::string>.
+	// else just use the requires like the code below.
+	else if constexpr (requires { static_cast<std::string>(*m_p_value); }) {
 		value = static_cast<std::string>(*m_p_value);
 	}
 	else {
