@@ -1,3 +1,4 @@
+#include "./code/Memory.h"
 #include "./code/MemoryTracker.h"
 
 void foo();

@@ -1,3 +1,4 @@
+#include "./code/Memory.h"
 #include "./code/MemoryTracker.h"
 #include <Windows.h>
 #include <thread>
@@ -31,7 +32,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 	Memory<std::string> mem7(value7, "std::string", ":code 9");
 	MemoryTracker t2(300, mem2, mem3, mem4, mem5, mem6, mem7);
 	for (int i = 0; i < 10; i++) {
-		value2 += 0.01;
+		value2 += 0.01f;
 		value3++;
 		value4++;
 		value5 = value4;
