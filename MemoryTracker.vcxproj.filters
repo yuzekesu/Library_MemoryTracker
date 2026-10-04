@@ -11,6 +11,9 @@
     <Filter Include="code">
       <UniqueIdentifier>{b01d4cac-2aa2-4467-8307-54d1d1f0fda5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="inte">
+      <UniqueIdentifier>{24f557c3-0017-4140-a9e5-390613e76ad3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main_demo.cpp">
@@ -22,9 +25,18 @@
     <ClCompile Include="code\MemoryTracker.cpp">
       <Filter>code</Filter>
     </ClCompile>
+    <ClCompile Include="code\Memory.cpp">
+      <Filter>code</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\MemoryTracker.h">
+      <Filter>code</Filter>
+    </ClInclude>
+    <ClInclude Include="code\IMemory.h">
+      <Filter>inte</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Memory.h">
       <Filter>code</Filter>
     </ClInclude>
   </ItemGroup>
