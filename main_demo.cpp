@@ -22,6 +22,7 @@ public:
 };
 
 void foo() {
+	using namespace Debug;
 	int a = 0;
 	float b = 0.0f;
 	coo c{};

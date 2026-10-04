@@ -1,16 +1,17 @@
 #pragma once
 #include <string>
 
-/// <summary>
-/// Virtual base class for polymorphism.
-/// </summary>
-class IMemory {
-public:
-	virtual std::string What() = 0;
-protected:
-	IMemory() = default;
-};
-
+namespace Debug {
+	/// <summary>
+	/// Virtual base class for polymorphism.
+	/// </summary>
+	class IMemory {
+	public:
+		virtual std::string What() = 0;
+	protected:
+		IMemory() = default;
+	};
+}
 //********************************************************************************************
 //********************************************************************************************
 //********************************************************************************************

@@ -4,11 +4,11 @@
 #include <mutex>
 #include <thread>
 
-MemoryTracker::~MemoryTracker() {
+Debug::MemoryTracker::~MemoryTracker() {
 	Stop();
 }
 
-void MemoryTracker::Stop() {
+void Debug::MemoryTracker::Stop() {
 	if (m_thread.joinable()) {
 		m_running = false;
 		m_thread.join();
@@ -22,7 +22,7 @@ void MemoryTracker::Stop() {
 /// <summary>
 /// The multithreading part.
 /// </summary>
-void MemoryTracker::Update() {
+void Debug::MemoryTracker::Update() {
 	while (m_running) {
 		std::lock_guard<std::mutex> lock(m_queue_mutex);
 		system("cls");
