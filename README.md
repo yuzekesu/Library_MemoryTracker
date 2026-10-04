@@ -1,5 +1,5 @@
 # Description
-A Windows-only library to recreate the live-expression experience. Let the user to observe the code in runtime without pausing the program.
+A Windows-only library to recreate the live-expression experience. Let the user to observe the value stores in any variable type in runtime without pausing the program.
 
 # How to Use
 The minimum requirement is to make sure the `<Windows.h>` is reachable as a header. 
